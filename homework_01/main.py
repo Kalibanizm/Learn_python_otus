@@ -14,6 +14,15 @@ def power_numbers(*nums):
     return print([n**2 for n in nums])
 
 
+def is_prime(n):
+    if n < 2:
+        return False
+    if n % 2 == 0:
+        return False
+    d = 3
+    while d * d <= n and n % d != 0:
+        d += 2
+    return d * d > n
 
 
 # filter types
@@ -22,7 +31,7 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_numbers():
+def filter_numbers(numbers, filter_type):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -35,12 +44,10 @@ def filter_numbers():
     """
     numbers_filtered = []
 
-        if filter_type == ODD:
-            numbers_filtered = filter(lambda number: (number % 2 != 0), numbers)
-        elif filter_type == EVEN:
-            numbers_filtered = filter(lambda number: (number % 2 == 0), numbers)
-        elif filter_type == PRIME:
-
+    if filter_type == ODD:
+        numbers_filtered = filter(lambda number: (number % 2 != 0), numbers)
+    elif filter_type == EVEN:
+        numbers_filtered = filter(lambda number: (number % 2 == 0), numbers)
+    elif filter_type == PRIME:
         numbers_filtered = filter(is_prime, numbers)
-
-        return list(numbers_filtered)
+    return list(numbers_filtered)
