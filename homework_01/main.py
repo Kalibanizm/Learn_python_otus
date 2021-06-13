@@ -11,7 +11,7 @@ def power_numbers(*nums):
     >>> power_numbers(1, 2, 5, 7)
     <<< [1, 4, 25, 49]
     """
-    return print([n**2 for n in nums])
+    return [n**2 for n in nums]
 
 
 def is_prime(n):
