@@ -4,14 +4,13 @@
 - NotEnoughFuel
 - CargoOverload
 """
-class LowFuelError(exceptions):
-    except ValueError:
-        print("Low fuel!")
+class LowFuelError(Exception):
+    pass
 
 
-class NotEnoughFuel(exceptions):
-    except ValueError:
-        print("Not enough fuel!")
-class CargoOverload (exceptions):
-    except ValueError:
-        print("Max weight reached!")
+class NotEnoughFuel(Exception):
+    pass
+
+
+class CargoOverload(Exception):
+    pass
