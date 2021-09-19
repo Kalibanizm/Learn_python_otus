@@ -5,10 +5,10 @@ import exceptions
 
 class Vehicle(ABC):
 
-    weight = 0
+    weight = 2500
     started = 0
-    fuel = 0
-    fuel_consumption = 0
+    fuel = 100
+    fuel_consumption = 1
 
     def __init__(self, weight, fuel, fuel_consumption):
         self.weight = weight
