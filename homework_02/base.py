@@ -6,7 +6,7 @@ import exceptions
 class Vehicle(ABC):
 
     weight = 2500
-    started = 0
+    started = False
     fuel = 100
     fuel_consumption = 1
 
