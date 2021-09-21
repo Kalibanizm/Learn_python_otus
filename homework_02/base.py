@@ -20,7 +20,7 @@ class Vehicle(ABC):
             self.started = True
             return self.started
         elif
-            self.started is True and (self.fuel > 0)
+            self.started is True and (self.fuel > 0):
             return self.started
         else:
             raise exceptions.LowFuelError
