@@ -3,7 +3,7 @@
 
 FROM python:3.8-buster
 
-WORKDIR /APP
+WORKDIR /demo-app
 
 RUN pip install poetry
 
