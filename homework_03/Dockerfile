@@ -1,3 +1,6 @@
+# Запуск контейнера
+# docker run -p8080:8000 web-app
+
 FROM python:3.8-buster
 
 WORKDIR /APP
@@ -6,9 +9,9 @@ RUN pip install poetry
 
 RUN poetry config virtualenvs.create false
 
-COPY ./demo-app/pyproject.toml
+COPY ./demo-app/pyproject.toml .
 
-COPY ./demo-app/poetry.lock
+COPY ./demo-app/poetry.lock .
 
 RUN poetry install
 
